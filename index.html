@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Dragon Battle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<h1>DRAGON BATTLE</h1>
+<div id="menu"><div>Pick your target form (you always start in Base):</div><div id="forms"></div><div class="difficulty-label">Bot difficulty:</div><div id="diff"></div><button id="go">FIGHT!</button></div>
+<canvas id="c" width="900" height="450"></canvas>
+<div class="help">A/D move · W jump · J punch · K ki blast (½ bar) · L hold = Kamehameha (1 bar) · C hold = charge ki · T transform (needs 4 bars) · U Dragon Fist (SSJ3/SSJ4/Rainbow, 2 bars) · Beam clash: mash L/Space/click! · O Instinct Dodge (UI/Autonomous/Rainbow, ½ bar)</div>
+<div id="pw"><div class="password-box"><div class="password-title">Enter password:</div><input id="pwi" type="password" autocomplete="off" class="password-input"> <button id="pws" class="password-button">Submit</button> <button id="pwc" class="password-button cancel">Cancel</button><div id="pwm" class="password-message"></div></div></div>
+<script src="script.js"></script>
+
+<!-- TRANSFORMATION VIDEO -->
+<div id="transformVideo" class="transform-video">
+    <video id="transformVideoPlayer" playsinline></video>
+
+    <iframe
+        id="transformYoutube"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+    </iframe>
+</div>
+
+</body></html>
