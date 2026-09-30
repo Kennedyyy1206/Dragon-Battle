@@ -1,24 +1,162 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>Dragon Battle</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="stylesheet" href="style.css">
-</head><body>
-<h1>DRAGON BATTLE</h1>
-<div id="menu"><div>Pick your target form (you always start in Base):</div><div id="forms"></div><div class="difficulty-label">Bot difficulty:</div><div id="diff"></div><button id="go">FIGHT!</button></div>
-<canvas id="c" width="900" height="450"></canvas>
-<div class="help">A/D move · W jump · J punch · K ki blast (½ bar) · L hold = Kamehameha (1 bar) · C hold = charge ki · T transform (needs 4 bars) · U Dragon Fist (SSJ3/SSJ4/Rainbow, 2 bars) · Beam clash: mash L/Space/click! · O Instinct Dodge (UI/Autonomous/Rainbow, ½ bar)</div>
-<div id="pw"><div class="password-box"><div class="password-title">Enter password:</div><input id="pwi" type="password" autocomplete="off" class="password-input"> <button id="pws" class="password-button">Submit</button> <button id="pwc" class="password-button cancel">Cancel</button><div id="pwm" class="password-message"></div></div></div>
-<script src="script.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Corner of Art, a personal art portfolio filled with drawings, paintings and stories.">
+  <title>Corner of Art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div class="bg" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div></div>
+  <header class="head">
+    <a class = "logo" href="#home">Corner of art</a>
+    <button class="menu" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="on">Home</a>
+      <a href="#works">Works</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About me</a>
+    </nav>
+  </header>
 
-<!-- TRANSFORMATION VIDEO -->
-<div id="transformVideo" class="transform-video">
-    <video id="transformVideoPlayer" playsinline></video>
+  <button class="arrow prev" aria-label="Previous page">‹</button>
+  <button class="arrow next" aria-label="Next page">›</button>
 
-    <iframe
-        id="transformYoutube"
-        allow="autoplay; fullscreen"
-        allowfullscreen>
-    </iframe>
-</div>
+  <main>
+    <section id="home" class="hero sec">
+      <div class = "wrap hero-in">
+        <div class="hero-pic fade">
+          <img src="assets/corner.jpg" alt="Corner at cafe">
+          <span class="note">artist, dreamer, maker</span>
+        </div>
+        <div class="hero-txt fade">
+          <p class="mini">Welcome to my little space</p>
+          <h1>Corner of <em>art</em></h1>
+          <p>She is known for her own art style and shows us that every piece can become a masterpiece. Art takes time, and the right pace helps you find a style that is truly yours.</p>
+          <blockquote>“Art means no mistakes.” <span>Corner</span></blockquote>
+          <div class="acts">
+            <a class="btn fill" href="#works">See my works</a>
+            <a class = "btn line" href="#contact">Drop a message</a>
+          </div>
+        </div>
+      </div>
+      <a class="down" href="#works" aria-label="Go to works">↓</a>
+    </section>
 
-</body></html>
+    <section id="works" class="works sec">
+      <div class="wrap">
+        <div class="top fade">
+          <div>
+            <p class="mini">Made slowly, shared gladly</p>
+            <h2>Selected works</h2>
+          </div>
+          <p class="intro">A small collection of digital drawings, painted moments and studies that helped shape my style.</p>
+        </div>
+
+        <div class="tabs fade" role="group" aria-label="Filter works">
+          <button class="tab on" data-kind="all">All</button>
+          <button class="tab" data-kind="digital">Digital</button>
+          <button class="tab" data-kind="paint">Painting</button>
+          <button class="tab" data-kind="sketch">Sketch</button>
+        </div>
+
+        <div class="grid">
+          <article class="card tall fade" data-kind="digital">
+            <button class="art" data-src="assets/parol.png" data-name="Start of the Parol">
+              <img src="assets/parol.png" alt="Parol art">
+              <span>View art</span>
+            </button>
+            <div class="card-txt"><h3>Start of the Parol</h3><p>Digital drawing</p></div>
+          </article>
+          <article class="card wide fade" data-kind="paint">
+            <button class="art" data-src="assets/whirl.png" data-name="Whirl Creation">
+              <img src="assets/whirl.png" alt="Galaxy art">
+              <span>View art</span>
+            </button>
+            <div class="card-txt"><h3>Whirl Creation</h3><p>Digital gouache</p></div>
+          </article>
+          <article class="card quote fade" data-kind="sketch">
+            <div class="sun">✦</div>
+            <p>Every drawing starts as a small idea, then finds its own light.</p>
+            <span>Sketch notes, 2026</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about sec">
+      <div class="wrap about-in">
+        <div class="about-pic fade">
+          <img src="assets/corner.jpg.png" alt="Corner portrait">
+          <div class="stamp"><b>Corner</b><span>since 2024</span></div>
+        </div>
+        <div class="about-txt fade">
+          <p class="mini">A little more about me</p>
+          <h2>Legacy in progress</h2>
+          <p>I graduated from high school with a growing love for art and a lot of ideas still waiting to be drawn. Each piece is part of the journey, made with patience, curiosity and a little courage.</p>
+          <div class="mission">
+            <span>My mission</span>
+            <p>To bring joy through art, make people feel seen, and create work that feels personal instead of perfect.</p>
+          </div>
+          <div class="nums">
+            <div><b>02</b><span>featured works</span></div>
+            <div><b>01</b><span>growing style</span></div>
+            <div><b>∞</b><span>ideas ahead</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact sec">
+      <div class="wrap contact-in">
+        <div class="contact-txt fade">
+          <p class="mini">Say hello</p>
+          <h2>Let’s make something gentle and memorable.</h2>
+          <p>For art requests, small collaborations, or a simple hello, leave a note here.</p>
+          <div class="social">
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer"><span>fb</span>Facebook</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><span>ig</span>Instagram</a>
+          </div>
+        </div>
+        <form class="form fade">
+          <!-- ===== YOUR CAPYBARA PICTURE GOES HERE =====
+          1. Save your picture inside the "assets" folder, e.g. assets/capybara.png
+             (a PNG with a transparent background looks best).
+          2. Delete this comment's start and end markers, and keep only the line below,
+             changing the file name if yours is different:
+
+          <img class="capy" src="assets/capybara.png" alt="Capybara">
+
+          Size and position are set in style.css under ".capy" (CONTACT section):
+          width = how big it is, top = how far it sits above the form. -->
+        <label>Name<input type="text" name="name" placeholder="Your name" required></label>
+          <label>Email<input type="email" name="email" placeholder="you@email.com" required></label>
+          <label>Message<textarea name="message" rows="5" placeholder="Tell me what you have in mind" required></textarea></label>
+          <button class="btn fill" type="submit">Send message</button>
+          <p class="msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a class="logo" href="#home">Corner of art</a>
+    <p>Where every drawing comes to life.</p>
+    <span>© <b id="yr"></b> Corner</span>
+  </footer>
+
+  <dialog class="pop">
+    <button class="x" aria-label="Close artwork">×</button>
+    <img src="assets/parol.png" alt="Artwork preview">
+    <p></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
